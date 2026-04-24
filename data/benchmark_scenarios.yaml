@@ -1,0 +1,75 @@
+# 10 multi-turn conversations — chạy scripts/run_benchmark.py để điền cột kết quả thực tế vào BENCHMARK.md
+scenarios:
+  - id: 1
+    name: "Profile recall — tên sau nhiều turn"
+    group: profile_recall
+    turns:
+      - "Chào bạn."
+      - "Hôm nay trời đẹp nhỉ."
+      - "Mình đang học LangGraph."
+      - "Nhân tiện tên mình là Linh."
+      - "Bạn có biết Redis dùng để làm gì không?"
+      - "À quên, bạn nhớ tên mình là gì không?"
+  - id: 2
+    name: "Conflict update — dị ứng (test rubric)"
+    group: conflict_update
+    turns:
+      - "Tôi dị ứng sữa bò."
+      - "À nhầm, tôi dị ứng đậu nành chứ không phải sữa bò."
+      - "Nhắc lại dị ứng của tôi là gì?"
+  - id: 3
+    name: "Episodic recall — bài học debug trước"
+    group: episodic_recall
+    turns:
+      - "Hôm qua mình debug mãi vì dùng localhost thay vì tên service Docker."
+      - "Bài học là dùng docker service name."
+      - "Hôm nay mình hỏi khác: bạn thích màu xanh."
+      - "Nhớ lại bài học debug hôm qua của mình là gì?"
+  - id: 4
+    name: "Semantic retrieval — FAQ Docker"
+    group: semantic_retrieval
+    turns:
+      - "Container của tôi không ping được database qua hostname."
+      - "Theo FAQ trong kiến thức nội bộ, nên làm gì?"
+  - id: 5
+    name: "Semantic + profile"
+    group: semantic_retrieval
+    turns:
+      - "Tôi tên là Minh."
+      - "Giải thích ngắn gọn episodic vs semantic memory theo FAQ nội bộ."
+  - id: 6
+    name: "Token budget / trim — hội thoại dài"
+    group: trim_token
+    turns:
+      - "Lặp lại: dòng 1 thông tin phụ."
+      - "Dòng 2 thông tin phụ."
+      - "Dòng 3 thông tin phụ."
+      - "Dòng 4 thông tin phụ."
+      - "Dòng 5: quan trọng — PROFILE_KEY: allergy=hải sản."
+      - "Chỉ trả lời: allergy của tôi trong profile là gì?"
+  - id: 7
+    name: "Profile — city update"
+    group: profile_recall
+    turns:
+      - "Tôi sống ở Hà Nội."
+      - "Tôi chuyển về TP.HCM rồi."
+      - "Tôi đang sống ở đâu?"
+  - id: 8
+    name: "Episodic — task outcome"
+    group: episodic_recall
+    turns:
+      - "Task hôm nay: deploy xong lúc 17h, kết quả thành công."
+      - "Hỏi khác: bạn có thích phở không?"
+      - "Tóm tắt outcome task deploy hôm nay của tôi."
+  - id: 9
+    name: "Semantic — LangGraph"
+    group: semantic_retrieval
+    turns:
+      - "Theo tài liệu nội bộ, tại sao nên tách node retrieve và model trong LangGraph?"
+  - id: 10
+    name: "Mixed — profile + semantic"
+    group: profile_recall
+    turns:
+      - "Gọi tôi là An."
+      - "Trích ý chính từ chunk faq_memory_1 trong kiến thức (episodic vs semantic)."
+      - "Tên tôi là gì và episodic khác semantic thế nào?"

@@ -1,0 +1,17 @@
+[
+  {
+    "id": "faq_docker_1",
+    "text": "Khi container không resolve được hostname của service khác, hãy dùng tên service trong docker-compose làm hostname (ví dụ: database thay vì localhost).",
+    "metadata": {"topic": "docker", "type": "faq"}
+  },
+  {
+    "id": "faq_langgraph_1",
+    "text": "Trong LangGraph, StateGraph cần reducer cho messages (add_messages) và nên tách node retrieve vs node model để dễ benchmark memory.",
+    "metadata": {"topic": "langgraph", "type": "faq"}
+  },
+  {
+    "id": "faq_memory_1",
+    "text": "Episodic memory lưu các sự kiện theo thời gian; semantic memory dùng embedding để tìm kiến thức tương tự truy vấn.",
+    "metadata": {"topic": "memory", "type": "faq"}
+  }
+]
